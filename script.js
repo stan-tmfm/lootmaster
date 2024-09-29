@@ -19,29 +19,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 clearInterval(loadingInterval); // Stop the loading interval
                 onLoadingComplete(); // Call the function to handle loading complete
             }
-        }, 1); // Update every 1 millisecond for faster loading
+        }, 1); // Keep the fast loading speed
 
         function onLoadingComplete() {
             // Fade out the loading screen
-            loadingScreen.classList.remove('show');
-            loadingScreen.classList.add('hide');
+            loadingScreen.style.opacity = '0'; // Set opacity to 0 to fade out
 
             // Wait for the fade-out transition to complete
             loadingScreen.addEventListener('transitionend', () => {
                 loadingScreen.style.display = 'none'; // Hide loading screen after fade out
 
                 // Show the start menu now, after the loading screen fades out
-                startMenu.style.display = 'flex'; // Show the start menu
-                startMenu.classList.remove('hide'); // Remove the hide class if it's there
-                startMenu.classList.add('show'); // Show with fade-in effect
+                startMenu.style.visibility = 'visible'; // Ensure it's visible
+                startMenu.style.opacity = '1'; // Fade in the start menu
             }, { once: true });
         }
 
         // Add functionality to the start button
         startButton.addEventListener('click', function() {
             // Fade out the start menu
-            startMenu.classList.remove('show');
-            startMenu.classList.add('hide');
+            startMenu.style.opacity = '0'; // Fade out
 
             // Wait for the fade-out transition to complete
             startMenu.addEventListener('transitionend', () => {
@@ -49,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(() => {
                     // Show the black game container after 1 second
                     gameContainer.style.display = 'block';
+                    gameContainer.style.opacity = '1';
 
                     // Load game data and settings
                     loadGameData();
@@ -59,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
         function loadGameData() {
             gameContainer.classList.remove('hide');
             gameContainer.classList.add('show'); // This will make it visible
-}
-
+        }
     }
 });
