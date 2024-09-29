@@ -1,0 +1,109 @@
+/* Body reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+/* Loading screen styles */
+#loading-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease; /* Smooth transition */
+}
+
+/* Show loading screen initially */
+#loading-screen.show {
+    opacity: 1;
+}
+
+/* Class for hiding the screens */
+.hide {
+    opacity: 0;
+}
+
+/* Start menu styles */
+#start-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease; /* Smooth transition */
+}
+
+/* Show start menu when ready */
+#start-menu.show {
+    opacity: 1;
+}
+
+/* Title styles */
+#start-menu h1 {
+    font-family: 'Cinzel', serif; /* Use the chosen font */
+    font-size: 8em; /* Large font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add some shadow for depth */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Start button styles */
+#start-button {
+    font-family: 'Cinzel', serif; /* Use the chosen font */
+    background-color: #404040; /* Green background */
+    color: white; /* White text */
+    font-size: 3em; /* Larger font size */
+    padding: 20px 40px; /* Padding for size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+/* Button hover effects */
+#start-button:hover {
+    background-color: #2e2e2e; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Button active effects */
+#start-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* loot_sword.png image styles */
+#loading-image {
+    width: 10%; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Loading bar styles */
+#loading-bar {
+    width: 10%; /* Width of the loading bar */
+    background-color: #555;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#progress {
+    height: 10px; /* Reduced height of the loading progress */
+    width: 0%; /* Initial width */
+    background-color: #4caf50; /* Progress color */
+}
+
+/* Loading percentage styles */
+#loading-percentage {
+    font-size: 1.5em;
+}
