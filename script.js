@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 window.onload = function () {
     const loadingScreen = document.getElementById('loading-screen');
     const startMenu = document.getElementById('start-menu');
@@ -36,4 +37,9 @@ function onLoadingComplete() {
         startMenu.classList.remove('hide'); // Remove the hide class if it's there
         startMenu.classList.add('show'); // Show with fade-in effect
     }, { once: true });
+
 }
+
+// more code can be inserted here later
+
+});
