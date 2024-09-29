@@ -13,13 +13,13 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    opacity: 0; /* Start hidden */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Start fully visible */
     transition: opacity 1s ease; /* Smooth transition */
-    z-index: 1000; /* Higher layer than start menu */
+    z-index: 100;
 }
 
 /* Show loading screen initially */
@@ -39,22 +39,22 @@ body {
 
 /* Start menu styles */
 #start-menu {
-    display: none;
     position: absolute;
     width: 100%;
     height: 100%;
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0; /* Start hidden */
     transition: opacity 1s ease; /* Smooth transition */
-    z-index: 999; /* Lower layer than loading screen */
+    visibility: hidden; /* Hide initially */
 }
 
 /* Show start menu when ready */
 #start-menu.show {
     opacity: 1;
+    visibility: visible; /* Make it visible when showing */
 }
 
 /* Title styles */
