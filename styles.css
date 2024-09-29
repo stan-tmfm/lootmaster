@@ -19,6 +19,7 @@ body {
     align-items: center; /* Center horizontally */
     opacity: 0; /* Start hidden */
     transition: opacity 1s ease; /* Smooth transition */
+    z-index: 1000; /* Higher layer than start menu */
 }
 
 /* Show loading screen initially */
@@ -48,6 +49,7 @@ body {
     align-items: center; /* Center horizontally */
     opacity: 0; /* Start hidden */
     transition: opacity 1s ease; /* Smooth transition */
+    z-index: 999; /* Lower layer than loading screen */
 }
 
 /* Show start menu when ready */
