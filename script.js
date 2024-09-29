@@ -30,8 +30,10 @@ function onLoadingComplete() {
     // Wait for the fade-out transition to complete
     loadingScreen.addEventListener('transitionend', () => {
         loadingScreen.style.display = 'none'; // Hide loading screen after fade out
-        startMenu.style.display = 'flex'; // Set to flex to center content
-        startMenu.classList.remove('hide'); // Remove hide class if it was added
-        startMenu.classList.add('show'); // Show the start menu
-    }, { once: true }); // Ensure the event listener is only called once
+
+        // Show the start menu now, after the loading screen fades out
+        startMenu.style.display = 'flex'; // Show the start menu
+        startMenu.classList.remove('hide'); // Remove the hide class if it's there
+        startMenu.classList.add('show'); // Show with fade-in effect
+    }, { once: true });
 }
