@@ -1,4 +1,4 @@
-/* Body reset */
+/* Body styles */
 body {
     margin: 0;
     padding: 0;
@@ -22,83 +22,27 @@ body {
     z-index: 100;
 }
 
-/* Show loading screen initially */
 #loading-screen.show {
     opacity: 1;
 }
 
-/* Class to hide elements */
 .hide {
-    display: none; /* Completely hides the element */
+    display: none;
 }
 
-/* Class to show elements */
 .show {
-    display: block; /* Makes the element visible */
+    display: block;
 }
 
-/* Start menu styles */
-#start-menu {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* Start hidden */
-    transition: opacity 1s ease; /* Smooth transition */
-    visibility: hidden; /* Hide initially */
-}
-
-/* Show start menu when ready */
-#start-menu.show {
-    opacity: 1;
-    visibility: visible; /* Make it visible when showing */
-}
-
-/* Title styles */
-#start-menu h1 {
-    font-family: 'Cinzel', serif; /* Use the chosen font */
-    font-size: 8em; /* Large font size */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add some shadow for depth */
-    margin-bottom: 20px; /* Space below the title */
-}
-
-/* Start button styles */
-#start-button {
-    font-family: 'Cinzel', serif; /* Use the chosen font */
-    background-color: #404040; /* Green background */
-    color: white; /* White text */
-    font-size: 3em; /* Larger font size */
-    padding: 20px 40px; /* Padding for size */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-}
-
-/* Button hover effects */
-#start-button:hover {
-    background-color: #2e2e2e; /* Darker green on hover */
-    transform: scale(1.05); /* Slightly enlarge the button */
-}
-
-/* Button active effects */
-#start-button:active {
-    transform: scale(0.95); /* Slightly shrink on click */
-}
-
-/* loot_sword.png image styles */
+/* Loading bar styles */
 #loading-image {
-    width: 10%; /* Adjust size as needed */
+    width: 10%;
     height: auto;
     margin-bottom: 20px;
 }
 
-/* Loading bar styles */
 #loading-bar {
-    width: 10%; /* Width of the loading bar */
+    width: 10%; 
     background-color: #555;
     border-radius: 10px;
     overflow: hidden;
@@ -106,13 +50,99 @@ body {
 }
 
 #progress {
-    height: 10px; /* Reduced height of the loading progress */
-    width: 0%; /* Initial width */
-    background-color: #4caf50; /* Progress color */
+    height: 10px;
+    width: 0%;
+    background-color: #4caf50;
 }
 
-/* Loading percentage styles */
 #loading-percentage {
+    font-size: 1.5em;
+}
+
+/* Game title styling */
+#game-title {
+    position: absolute;  /* Position it absolutely within the viewport */
+    top: 35%; /* Vertically center it */
+    left: 49.5%; /* Horizontally center it */
+    transform: translate(-50%, -50%); /* Adjust to fully center the text */
+    margin: 0; /* Remove default margin */
+    margin-bottom: 30px;
+    visibility: hidden; /* Start hidden instead of display: none */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 1s ease, visibility 0s 1s; /* Fade in and out with transition */
+}
+
+#game-title.show {
+    visibility: visible; /* Make it visible when triggered */
+    opacity: 1; /* Fade in the title */
+    transition: opacity 1s ease, visibility 0s 0s; /* Fade-in transition */
+}
+
+#game-title h1 {
+    font-family: 'Cinzel', serif; /* Use the Cinzel font for the title */
+    font-size: 9.9em; /* Make the title super large */
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7); /* Strong shadow for contrast */
+    color: white; /* White text color */
+    margin: 0; /* Remove default margin */
+    transition: transform 0.5s, background-color 0.6s;
+}
+
+/* Save Slots Menu Styling */
+#save-slots {
+    position: absolute;
+    top: 45%;  /* Adjust to move save slots down */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 50%;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 1s ease; /* Fade in and out with transition */
+}
+
+#save-slots.show {
+    opacity: 1; /* Make it visible when triggered */
+}
+
+/* Adjust size and spacing for save slots */
+.save-slot {
+    width: 30%;  /* Make the width 30% of the parent container */
+    height: 40%;
+    background-color: #222;
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    padding: 30px;
+    transition: transform 0.5s, background-color 0.6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px; /* Space between slots */
+}
+
+.save-slot:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+.save-slot h2 {
+    font-family: 'Cinzel', serif; /* Font from Google Fonts */
+    font-size: 2em;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.save-info {
+    font-size: 1.2em;
+    color: #4caf50; /* Green color for currency or data */
+    margin-top: 10px;
+}
+
+.save-data {
     font-size: 1.5em;
 }
 
@@ -123,6 +153,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black; /* Black background */
-    z-index: -1000000; /* Ensure it's the farthest back layer */
+    background-color: black;
+    z-index: -1000000;
 }
