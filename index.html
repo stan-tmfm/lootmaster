@@ -4,51 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lootmaster</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pregame_styles.css">
+    <link rel="stylesheet" href="game_styles.css">
     <link rel="icon" type="image/x-icon" href="loot_sword_favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Loading Screen -->
     <div id="loading-screen" class="show">
-        <img src="loot_sword.png" alt="Loading..." id="loading-image">
+        <img src="loot_sword.png" alt="loading image" id="loading-image">
         <div id="loading-bar">
             <div id="progress"></div>
         </div>
         <div id="loading-percentage">0%</div>
     </div>
     
-    <!-- Game Title -->
-<div id="game-title">
-    <h1>Lootmaster</h1>
-</div>
+    <div id="large-word-above-save-slots">
+        <h1>Lootmaster</h1>
+    </div>
+    
+    <!-- will eventually add currencies and stuff on the save slots to represent progress -->
+    <div id="save-slots" class="hide">
+        <div class="save-slot" id="slot-1">
+            <h2>Save Slot 1</h2>
+            <div class="save-info">
+                <span class="save-data"></span>
+            </div>
+        </div>
+        <div class="save-slot" id="slot-2">
+            <h2>Save Slot 2</h2>
+            <div class="save-info">
+                <span class="save-data"></span>
+            </div>
+        </div>
+        <div class="save-slot" id="slot-3">
+            <h2>Save Slot 3</h2>
+            <div class="save-info">
+            <span class="save-data"></span>
+            </div>
+        </div>
+    </div>
 
-<!-- Save Slots Menu -->
-<div id="save-slots" class="hide">
-    <div class="save-slot" id="slot-1">
-        <h2>Save Slot 1</h2>
-        <div class="save-info">
-            <span class="save-data"></span> <!-- Empty span for dynamic data -->
-        </div>
-    </div>
-    <div class="save-slot" id="slot-2">
-        <h2>Save Slot 2</h2>
-        <div class="save-info">
-            <span class="save-data"></span> <!-- Empty span for dynamic data -->
-        </div>
-    </div>
-    <div class="save-slot" id="slot-3">
-        <h2>Save Slot 3</h2>
-        <div class="save-info">
-            <span class="save-data"></span> <!-- Empty span for dynamic data -->
-        </div>
-    </div>
-</div>
-
-    <!-- Game Container -->
     <div id="game-container" class="hide">
+        <p>once development on this game starts again, I will make the game container into an actual game, but for now it is just a red background of doom.</p>
+        <figure>
+            <img src="coin.png" alt="ai generated image of a coin (placeholder image)" width="30%">
+            <figcaption>ai generated image of a coin (placeholder image)</figcaption>
+        </figure>
     </div>
 
-    <script src="script.js"></script>
+    <script src="pregame_script.js"></script>
 </body>
 </html>
